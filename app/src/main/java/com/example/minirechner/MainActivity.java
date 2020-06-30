@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText field2;
     TextView field3;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
