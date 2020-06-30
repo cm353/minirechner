@@ -7,20 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText field1;
     EditText field2;
-    EditText field3;
+    TextView field3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        field1 = (EditText) findViewById(R.id.editTextNumber1);
-        field2 = (EditText) findViewById(R.id.editTextNumber2);
-        field3 = (EditText) findViewById(R.id.editTextResult);
+        field1 =  findViewById(R.id.editTextNumber1);
+        field2 =  findViewById(R.id.editTextNumber2);
+        field3 =  findViewById(R.id.editTextResult);
     }
 
     public void hideKeyboard(View v) {

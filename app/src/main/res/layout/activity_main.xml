@@ -13,12 +13,16 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
         android:ems="10"
         android:hint="@string/number1"
         android:inputType="textPersonName"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
     <EditText
         android:id="@+id/editTextNumber2"
@@ -27,12 +31,30 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
         android:ems="10"
         android:hint="@string/number2"
         android:inputType="textPersonName"
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
+
+    <TextView
+        android:id="@+id/editTextResult"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:ems="10"
+        android:hint="@string/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
 
     <Button
         android:id="@+id/buttonAdd"
@@ -43,23 +65,10 @@
         android:layout_marginEnd="5dp"
         android:onClick="myAdd"
         android:text="@string/add"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/buttonSubtract"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
-
-    <EditText
-        android:id="@+id/editTextResult"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
-        android:ems="10"
-        android:hint="@string/result"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
 
     <Button
         android:id="@+id/buttonSubtract"
@@ -70,6 +79,7 @@
         android:layout_marginEnd="5dp"
         android:onClick="mySubtract"
         android:text="@string/subtract"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/buttonMultiply"
         app:layout_constraintStart_toEndOf="@+id/buttonAdd"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
@@ -83,6 +93,7 @@
         android:layout_marginEnd="5dp"
         android:onClick="myMultiply"
         android:text="@string/multiply"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
         app:layout_constraintStart_toEndOf="@+id/buttonSubtract"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
@@ -96,6 +107,7 @@
         android:layout_marginEnd="10dp"
         android:onClick="myDivide"
         android:text="@string/divide"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
