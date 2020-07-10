@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="myDelete"
+        android:text="@string/deleteMemory"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:onClick="mySave"
+        android:text="@string/save"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
+
     <EditText
         android:id="@+id/editTextNumber1"
         android:layout_width="0dp"
@@ -30,7 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
         android:textSize="20sp"
         android:gravity="center"
@@ -47,23 +71,24 @@
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
-        android:textSize="20sp"
-        android:gravity="center"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/result"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLoad" />
 
     <Button
         android:id="@+id/buttonAdd"
-        android:layout_width="0dp"
+        android:layout_width="90dp"
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
         android:onClick="myAdd"
         android:text="@string/add"
         android:textSize="20sp"
@@ -73,11 +98,11 @@
 
     <Button
         android:id="@+id/buttonSubtract"
-        android:layout_width="0dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
         android:onClick="mySubtract"
         android:text="@string/subtract"
         android:textSize="20sp"
@@ -86,12 +111,24 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
 
     <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="myLoad"
+        android:text="@string/loadMemory"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
+        app:layout_constraintStart_toEndOf="@+id/buttonSave"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
+
+    <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="0dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
         android:onClick="myMultiply"
         android:text="@string/multiply"
         android:textSize="20sp"
@@ -101,10 +138,10 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="0dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
         android:onClick="myDivide"
         android:text="@string/divide"

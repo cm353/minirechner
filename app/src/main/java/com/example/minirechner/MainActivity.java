@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myDelete(View v) {
-        mViewModel.setResult(0.0);
+        mViewModel.setMemory(0.0);
         field3.setText(getResources().getText(R.string.delete));
     }
 
