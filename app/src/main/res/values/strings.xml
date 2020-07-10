@@ -9,5 +9,11 @@
     <string name="multiply">*</string>
     <string name="errorNumberFormat">Eingabe ist keine Zahl</string>
     <string name="errorDivBy0">Division durch Null</string>
+    <string name="delete">Speicher gelöscht</string>
+    <string name="save">M</string>
+    <string name="loadMemory">M+</string>
+    <string name="deleteMemory">M-</string>
+
+
 
 </resources>
