@@ -13,7 +13,5 @@
     <string name="save">M</string>
     <string name="loadMemory">M+</string>
     <string name="deleteMemory">M-</string>
-
-
-
+    <string name="deleteUserInput">D</string>
 </resources>

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         field1 =  findViewById(R.id.editTextNumber1);
         field2 =  findViewById(R.id.editTextNumber2);
         field3 =  findViewById(R.id.editTextResult);
@@ -117,5 +119,12 @@ public class MainActivity extends AppCompatActivity {
         mViewModel.setNumber2(this.editTextToDouble(field2));
     }
 
+    public void myDeleteUserInput(View v) {
+        mViewModel.setNumber1(0.0);
+        mViewModel.setNumber2(0.0);
+        field1.setText("");
+        field2.setText("");
+        field3.setText("");
+    }
 }
 

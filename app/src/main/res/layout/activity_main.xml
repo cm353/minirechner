@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,27 +8,46 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonDelete"
-        android:layout_width="90dp"
+        android:id="@+id/buttonDeleteUserEntrys"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:onClick="myDeleteUserInput"
+        android:text="@string/deleteUserInput"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@id/buttonDelete"/>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="0dp"
         android:onClick="myDelete"
         android:text="@string/deleteMemory"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply"
+        app:layout_constraintStart_toEndOf="@id/buttonLoad"
+        app:layout_constraintEnd_toStartOf="@id/buttonDeleteUserEntrys"
+        tools:layout_editor_absoluteX="211dp" />
 
     <Button
         android:id="@+id/buttonSave"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginTop="10dp"
         android:onClick="mySave"
         android:text="@string/save"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLoad"
         app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
 
     <EditText
@@ -84,7 +104,7 @@
 
     <Button
         android:id="@+id/buttonAdd"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
@@ -98,7 +118,7 @@
 
     <Button
         android:id="@+id/buttonSubtract"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="25dp"
@@ -112,19 +132,22 @@
 
     <Button
         android:id="@+id/buttonLoad"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="0dp"
         android:onClick="myLoad"
         android:text="@string/loadMemory"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
-        app:layout_constraintStart_toEndOf="@+id/buttonSave"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtract"
+        app:layout_constraintStart_toEndOf="@id/buttonSave"
+        app:layout_constraintEnd_toStartOf="@id/buttonDelete"
+        tools:layout_editor_absoluteX="114dp" />
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="25dp"
@@ -138,7 +161,7 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="25dp"
