@@ -54,9 +54,8 @@ public class MainActivity extends AppCompatActivity {
         this.hideKeyboard(v);
         try {
             this.storeUserInput();
-            mViewModel.setResult(CalculatorUtil.add(mViewModel.getNumber1(),mViewModel.getNumber2()));
+            mViewModel.add();
             field3.setText(mViewModel.getResult().toString());
-            mViewModel.count();
         } catch (NumberFormatException e) {
             field3.setText(getResources().getText(R.string.errorNumberFormat));
         }
@@ -66,9 +65,8 @@ public class MainActivity extends AppCompatActivity {
         this.hideKeyboard(v);
         try {
             this.storeUserInput();
-            mViewModel.setResult(CalculatorUtil.subtract(mViewModel.getNumber1(), mViewModel.getNumber2()));
+            mViewModel.subtract();
             field3.setText(mViewModel.getResult().toString());
-            mViewModel.count();
         } catch (NumberFormatException e) {
             field3.setText(getResources().getText(R.string.errorNumberFormat));
         }
@@ -78,9 +76,8 @@ public class MainActivity extends AppCompatActivity {
         this.hideKeyboard(v);
         try {
             this.storeUserInput();
-            mViewModel.setResult(CalculatorUtil.multiply(mViewModel.getNumber1(), mViewModel.getNumber2()));
+            mViewModel.multiply();
             field3.setText(mViewModel.getResult().toString());
-            mViewModel.count();
         } catch (NumberFormatException e) {
             field3.setText(getResources().getText(R.string.errorNumberFormat));
         }
@@ -90,9 +87,8 @@ public class MainActivity extends AppCompatActivity {
         this.hideKeyboard(v);
         try {
             this.storeUserInput();
-            mViewModel.setResult(CalculatorUtil.divide(mViewModel.getNumber1(), mViewModel.getNumber2()));
+            mViewModel.divide();
             field3.setText(mViewModel.getResult().toString());
-            mViewModel.count();
         } catch (ArithmeticException e) {
             field3.setText(getResources().getText(R.string.errorDivBy0));
         } catch (NumberFormatException e) {
@@ -105,12 +101,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myLoad(View v) {
-        field2.setText(mViewModel.getMemory().toString());
-        mViewModel.setNumber2(mViewModel.getMemory());
+        if(mViewModel.getMemory()!=null) {
+            field1.setText(mViewModel.getMemory().toString());
+            mViewModel.setNumber1(mViewModel.getMemory());
+        } else {
+            field3.setText(getResources().getText(R.string.memoryEmpty));
+        }
     }
 
     public void myDelete(View v) {
-        mViewModel.setMemory(0.0);
+        mViewModel.setMemory(null);
         field3.setText(getResources().getText(R.string.delete));
     }
 
@@ -120,8 +120,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void myDeleteUserInput(View v) {
-        mViewModel.setNumber1(0.0);
-        mViewModel.setNumber2(0.0);
+        mViewModel.setNumber1(null);
+        mViewModel.setNumber2(null);
         field1.setText("");
         field2.setText("");
         field3.setText("");

@@ -14,4 +14,5 @@
     <string name="loadMemory">M+</string>
     <string name="deleteMemory">M-</string>
     <string name="deleteUserInput">D</string>
+    <string name="memoryEmpty">Speicher ist leer</string>
 </resources>

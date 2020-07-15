@@ -4,10 +4,10 @@ import androidx.lifecycle.ViewModel;
 
 public class CalculatorViewModel extends ViewModel {
 
-    private Double number1 = 0.0;
-    private Double number2 = 0.0;
-    private Double result = 0.0;
-    private Double memory = 0.0;
+    private Double number1 = null;
+    private Double number2 = null;
+    private Double result = null;
+    private Double memory = null;
     private int index = 0;
 
     public Double getNumber1() {
@@ -42,12 +42,40 @@ public class CalculatorViewModel extends ViewModel {
         this.memory = memory;
     }
 
-    public void setResult(Double result) {
-        this.result = result;
+    private void count(){
+        index++;
     }
 
-    public void count(){
-        index++;
+    public void add() throws IllegalArgumentException {
+        if(this.checkIfNull())
+            throw new IllegalArgumentException();
+        result = CalculatorUtil.add(number1, number2);
+        this.count();
+    }
+
+    public void subtract () throws IllegalArgumentException {
+        if(this.checkIfNull())
+            throw new IllegalArgumentException();
+        result = CalculatorUtil.subtract(number1, number2);
+        this.count();
+    }
+
+    public void multiply() throws IllegalArgumentException {
+        if(this.checkIfNull())
+            throw new IllegalArgumentException();
+        result = CalculatorUtil.multiply(number1, number2);
+        this.count();
+    }
+
+    public void divide() throws ArithmeticException, IllegalArgumentException {
+        if(this.checkIfNull())
+            throw new IllegalArgumentException();
+        result = CalculatorUtil.divide(number1, number2);
+        this.count();
+    }
+
+    public  boolean checkIfNull() {
+        return number1 == null || number2 == null;
     }
 
 }
