@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         field1 =  findViewById(R.id.editTextNumber1);
         field2 =  findViewById(R.id.editTextNumber2);
         field3 =  findViewById(R.id.editTextResult);
